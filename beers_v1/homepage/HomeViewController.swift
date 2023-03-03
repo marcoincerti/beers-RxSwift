@@ -28,13 +28,15 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
     var descriptionMapFPC: FloatingPanelController!
     var descriptionController: DescriptionController!
     
-    private var labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    //private var labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    let labels = Observable.of(["Blonde", "B", "C", "D", "E", "F", "G", "H"])
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
+    //creare un datasource anche per le chips
     let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Beer>>(
         configureCell: { (_, tv, ip, beer: Beer) in
             let cell = tv.dequeueReusableCell(withIdentifier: "elementCell")! as? elementViewCell
@@ -53,26 +55,38 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createUI()
-
+        
         let tableView: UITableView = self.tableView
         tableView.register(UINib(nibName: "elementCell", bundle: nil), forCellReuseIdentifier: "elementCell")
         tableView.rowHeight = 120
+        
+        let collectionView: UICollectionView = self.collectionView
+        collectionView.register(UINib(nibName: "chipsView", bundle: nil), forCellWithReuseIdentifier: "chipsView")
+        
+        labels
+            .bind(to: collectionView.rx.items) { (collectionView: UICollectionView, index: Int, element: String) in
+                print(element)
+                let indexPath = IndexPath(item: index, section: 0)
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chipsView", for: indexPath) as? filterChipsCell
+                cell!.setLabel(label: element)
+                return cell!
+            }.disposed(by: disposeBag)
+        
         
         let loadNextPageTrigger: (Driver<BeerSearchState>) -> Signal<()> =  { state in
             tableView.rx.contentOffset.asDriver()
                 .withLatestFrom(state)
                 .flatMap { state in
                     return tableView.isNearBottomEdge(edgeOffset: 20.0) && !state.shouldLoadNextPage
-                        ? Signal.just(())
-                        : Signal.empty()
+                    ? Signal.just(())
+                    : Signal.empty()
                 }
         }
-
+        
         let activityIndicator = ActivityIndicator()
-
+        
         let searchBar: UISearchBar = self.searchBar
-         
-
+        
         let state = beersSearch(
             searchText: searchBar.rx.text.orEmpty.changed.asSignal().throttle(.milliseconds(300)),
             loadNextPageTrigger: loadNextPageTrigger,
@@ -100,7 +114,7 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
                 //UIApplication.shared.open(repository.url)
             })
             .disposed(by: disposeBag)
-
+        
         tableView.rx.contentOffset
             .subscribe { _ in
                 if searchBar.isFirstResponder {
@@ -108,11 +122,14 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
                 }
             }
             .disposed(by: disposeBag)
-
+        
         // so normal delegate customization can also be used
         tableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
-
+        
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
     }
     
     func createUI(){
@@ -128,7 +145,7 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
         let stackView = UIStackView(arrangedSubviews: [titleLabel, titleLabel2])
         stackView.spacing = 3
         stackView.alignment = .center
-
+        
         navigationItem.titleView = stackView
         
         messageView.layer.cornerRadius = 15
@@ -142,7 +159,7 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
         descriptionController = DescriptionController(nibName: "descriptionView", bundle: .main)
         
     }
-
+    
     // MARK: Table view delegate
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -158,11 +175,12 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
 
 class DescriptionFloatingPanelLayout: FloatingPanelLayout {
     let position: FloatingPanelPosition = .bottom
-    let initialState: FloatingPanelState = .tip
+    let initialState: FloatingPanelState = .half
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
         return [
-            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.5, edge: .bottom, referenceGuide: .safeArea),
-            .tip: FloatingPanelLayoutAnchor(absoluteInset: 150.0, edge: .bottom, referenceGuide: .safeArea),
+            .full: FloatingPanelLayoutAnchor(absoluteInset: 16.0, edge: .top, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(fractionalInset: 0.3, edge: .bottom, referenceGuide: .safeArea),
+            .tip: FloatingPanelLayoutAnchor(absoluteInset: -34, edge: .bottom, referenceGuide: .safeArea),
         ]
     }
 }

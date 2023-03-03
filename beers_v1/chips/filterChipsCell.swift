@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import Differentiator
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class filterChipsCell: UICollectionViewCell {
     @IBOutlet var btn: UIButton!
     
     func setLabel(label:String) {
         btn.setTitle(label, for: .normal)
     }
 }
-  
