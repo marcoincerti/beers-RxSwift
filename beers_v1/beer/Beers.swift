@@ -26,6 +26,7 @@ struct BeerSearchState {
     var failure: BeersServiceError?
 
     init(searchText: String, url: String) {
+        //ogni volta che viene spinto un button lo aggiungo qua e metto che dovrei cercare una nuova volta
         self.searchText = searchText
         shouldLoadNextPage = true
         beers = Version([])

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84282FFD29B207DB00C611F7 /* chipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84282FFC29B207DB00C611F7 /* chipsView.xib */; };
+		84282FFF29B20A8200C611F7 /* filterChipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84282FFE29B20A8200C611F7 /* filterChipsCell.swift */; };
+		8428300529B210C500C611F7 /* descriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8428300429B210C500C611F7 /* descriptionView.xib */; };
+		8428300729B211BD00C611F7 /* description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428300629B211BD00C611F7 /* description.swift */; };
 		84CF962729AFB5DF00F46D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF962629AFB5DF00F46D6E /* AppDelegate.swift */; };
 		84CF962929AFB5DF00F46D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF962829AFB5DF00F46D6E /* SceneDelegate.swift */; };
 		84CF962B29AFB5DF00F46D6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF962A29AFB5DF00F46D6E /* HomeViewController.swift */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84282FFC29B207DB00C611F7 /* chipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = chipsView.xib; sourceTree = "<group>"; };
+		84282FFE29B20A8200C611F7 /* filterChipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterChipsCell.swift; sourceTree = "<group>"; };
+		8428300429B210C500C611F7 /* descriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = descriptionView.xib; sourceTree = "<group>"; };
+		8428300629B211BD00C611F7 /* description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = description.swift; sourceTree = "<group>"; };
 		84CF962329AFB5DF00F46D6E /* beers_v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beers_v1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF962629AFB5DF00F46D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CF962829AFB5DF00F46D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +140,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84282FF929B2079700C611F7 /* chips */ = {
+			isa = PBXGroup;
+			children = (
+				84282FFC29B207DB00C611F7 /* chipsView.xib */,
+				84282FFE29B20A8200C611F7 /* filterChipsCell.swift */,
+			);
+			path = chips;
+			sourceTree = "<group>";
+		};
+		8428300329B210B200C611F7 /* desciption */ = {
+			isa = PBXGroup;
+			children = (
+				8428300429B210C500C611F7 /* descriptionView.xib */,
+				8428300629B211BD00C611F7 /* description.swift */,
+			);
+			path = desciption;
+			sourceTree = "<group>";
+		};
 		84CF961A29AFB5DF00F46D6E = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +181,8 @@
 		84CF962529AFB5DF00F46D6E /* beers_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				8428300329B210B200C611F7 /* desciption */,
+				84282FF929B2079700C611F7 /* chips */,
 				84CF96AE29AFDB0000F46D6E /* homepage */,
 				84CF968129AFB8DB00F46D6E /* utils */,
 				84CF967829AFB79000F46D6E /* element */,
@@ -364,9 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CF963329AFB5E000F46D6E /* LaunchScreen.storyboard in Resources */,
+				84282FFD29B207DB00C611F7 /* chipsView.xib in Resources */,
 				84CF963029AFB5E000F46D6E /* Assets.xcassets in Resources */,
 				84CF967C29AFB79F00F46D6E /* elementCell.xib in Resources */,
 				84CF962E29AFB5DF00F46D6E /* Main.storyboard in Resources */,
+				8428300529B210C500C611F7 /* descriptionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +437,13 @@
 				84CF96A329AFC17B00F46D6E /* Lenes.swift in Sources */,
 				84CF962729AFB5DF00F46D6E /* AppDelegate.swift in Sources */,
 				84CF969F29AFC0D500F46D6E /* Version.swift in Sources */,
+				8428300729B211BD00C611F7 /* description.swift in Sources */,
 				84CF96AD29AFD1F200F46D6E /* ActivityIndicator.swift in Sources */,
 				84CF967E29AFB7C400F46D6E /* UIFont+extension.swift in Sources */,
 				84CF969829AFB8F400F46D6E /* Wireframe.swift in Sources */,
 				84CF969729AFB8F400F46D6E /* UIImage+Extensions.swift in Sources */,
 				84CF962929AFB5DF00F46D6E /* SceneDelegate.swift in Sources */,
+				84282FFF29B20A8200C611F7 /* filterChipsCell.swift in Sources */,
 				84CF967B29AFB79F00F46D6E /* elementViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
