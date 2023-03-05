@@ -186,7 +186,7 @@
 				84CF96AE29AFDB0000F46D6E /* homepage */,
 				84CF968129AFB8DB00F46D6E /* utils */,
 				84CF967829AFB79000F46D6E /* element */,
-				84CF967329AFB76A00F46D6E /* beer */,
+				84CF967329AFB76A00F46D6E /* beers-model */,
 				84CF967029AFB74A00F46D6E /* beersAPI */,
 				84CF962629AFB5DF00F46D6E /* AppDelegate.swift */,
 				84CF962829AFB5DF00F46D6E /* SceneDelegate.swift */,
@@ -223,13 +223,13 @@
 			path = beersAPI;
 			sourceTree = "<group>";
 		};
-		84CF967329AFB76A00F46D6E /* beer */ = {
+		84CF967329AFB76A00F46D6E /* beers-model */ = {
 			isa = PBXGroup;
 			children = (
 				84CF967429AFB77600F46D6E /* Beer.swift */,
 				84CF969C29AFC05000F46D6E /* Beers.swift */,
 			);
-			path = beer;
+			path = "beers-model";
 			sourceTree = "<group>";
 		};
 		84CF967829AFB79000F46D6E /* element */ = {

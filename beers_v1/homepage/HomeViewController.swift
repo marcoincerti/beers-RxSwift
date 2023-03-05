@@ -11,24 +11,17 @@ import RxCocoa
 import RxDataSources
 import FloatingPanel
 
-extension UIScrollView {
-    func  isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool {
-        self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
-    }
-}
-
 class ViewController: UIViewController {
     var disposeBag = DisposeBag()
 }
 
-//dividere meglio il view controller e la view
 class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelControllerDelegate {
     
     static let startLoadingOffset: CGFloat = 20.0
     var descriptionMapFPC: FloatingPanelController!
     var descriptionController: DescriptionController!
     
-    //private var labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+    //of operator is used to create an observables array or an observable of individual type
     let labels = Observable.of(["Blonde", "B", "C", "D", "E", "F", "G", "H"])
     
     @IBOutlet weak var tableView: UITableView!
@@ -169,6 +162,12 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
     deinit {
         // I know, I know, this isn't a good place of truth, but it's no
         self.navigationController?.navigationBar.backgroundColor = nil
+    }
+}
+
+extension UIScrollView {
+    func  isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool {
+        self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
     }
 }
 
