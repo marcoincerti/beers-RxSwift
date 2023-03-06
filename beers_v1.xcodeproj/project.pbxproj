@@ -181,10 +181,10 @@
 		84CF962529AFB5DF00F46D6E /* beers_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				84CF968129AFB8DB00F46D6E /* utils */,
 				8428300329B210B200C611F7 /* desciption */,
 				84282FF929B2079700C611F7 /* chips */,
 				84CF96AE29AFDB0000F46D6E /* homepage */,
-				84CF968129AFB8DB00F46D6E /* utils */,
 				84CF967829AFB79000F46D6E /* element */,
 				84CF967329AFB76A00F46D6E /* beers-model */,
 				84CF967029AFB74A00F46D6E /* beersAPI */,

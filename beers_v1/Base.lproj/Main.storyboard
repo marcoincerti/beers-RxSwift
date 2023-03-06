@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="SwE-yZ-ysA">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="191"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="176"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" placeholder="Search" id="bkV-yX-nvL">
@@ -83,11 +83,11 @@
                                                 <constraint firstItem="tFp-U1-Zhu" firstAttribute="leading" secondItem="ub7-MK-xBl" secondAttribute="leading" id="xce-6I-aBy"/>
                                             </constraints>
                                         </view>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHt-PN-eZM">
-                                            <rect key="frame" x="5" y="141" width="383" height="50"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHt-PN-eZM">
+                                            <rect key="frame" x="5" y="146" width="383" height="35"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="qKX-r7-Blx"/>
+                                                <constraint firstAttribute="height" constant="35" id="MC6-vg-LJR"/>
                                             </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ryc-8w-hHb">
                                                 <size key="itemSize" width="150" height="50"/>
@@ -103,9 +103,9 @@
                                     <constraints>
                                         <constraint firstItem="ldl-O8-gkv" firstAttribute="leading" secondItem="SwE-yZ-ysA" secondAttribute="leading" constant="5" id="N5Z-g5-Bg1"/>
                                         <constraint firstItem="ldl-O8-gkv" firstAttribute="top" secondItem="bkV-yX-nvL" secondAttribute="bottom" constant="5" id="iYw-Dd-KS3"/>
+                                        <constraint firstItem="ZHt-PN-eZM" firstAttribute="top" secondItem="ldl-O8-gkv" secondAttribute="bottom" constant="10" id="jTs-cx-HnG"/>
                                         <constraint firstItem="ZHt-PN-eZM" firstAttribute="leading" secondItem="SwE-yZ-ysA" secondAttribute="leading" constant="5" id="nvb-US-njT"/>
                                         <constraint firstAttribute="trailing" secondItem="ZHt-PN-eZM" secondAttribute="trailing" constant="5" id="pzz-8S-gV1"/>
-                                        <constraint firstItem="ZHt-PN-eZM" firstAttribute="top" secondItem="ldl-O8-gkv" secondAttribute="bottom" constant="5" id="sLI-Ua-YVL"/>
                                         <constraint firstAttribute="trailing" secondItem="ldl-O8-gkv" secondAttribute="trailing" constant="5" id="sOg-RV-BQU"/>
                                     </constraints>
                                 </view>

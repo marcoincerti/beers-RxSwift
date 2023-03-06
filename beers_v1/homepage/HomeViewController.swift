@@ -22,7 +22,7 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
     var descriptionController: DescriptionController!
     
     //of operator is used to create an observables array or an observable of individual type
-    let labels = Observable.of(["Blonde", "B", "C", "D", "E", "F", "G", "H"])
+    let labels = Observable.of(["Blonde", "Tipo B", "C", "D", "E", "F", "G", "H"])
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageView: UIView!
@@ -75,13 +75,13 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
                     : Signal.empty()
                 }
         }
-        
+    
         let activityIndicator = ActivityIndicator()
         
         let searchBar: UISearchBar = self.searchBar
         
         let state = beersSearch(
-            searchText: searchBar.rx.text.orEmpty.changed.asSignal().throttle(.milliseconds(300)),
+            searchText: searchBar.rx.text.orEmpty.changed.asSignal().throttle(.milliseconds(500)),
             loadNextPageTrigger: loadNextPageTrigger,
             performSearch: { URL in
                 BeersSearchAPI.sharedAPI.loadSearchURL(URL)
@@ -98,7 +98,7 @@ class HomeViewController: ViewController, UITableViewDelegate, FloatingPanelCont
         tableView.rx.modelSelected(Beer.self)
             .subscribe(onNext: { beer in
                 //Open
-                print(beer)
+                //print(beer)
                 self.descriptionMapFPC.set(contentViewController: self.descriptionController)
                 self.descriptionController.updateUI(beer: beer)
                 self.descriptionMapFPC.show(animated: true, completion: {

@@ -3,4 +3,133 @@
    uuid = "3973A047-D5E3-47F5-AE00-7F4F3522567C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A9EDC1F-F3C4-478D-A872-D198F45A5CDC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "beers_v1/beers-model/Beers.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "beersSearch(searchText:loadNextPageTrigger:performSearch:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FCBD746-920C-44EE-8E16-F9679AD47C73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "beers_v1/beers-model/Beers.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "reduce(state:command:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FCBD746-920C-44EE-8E16-F9679AD47C73 - 8160b05a24bbb71"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static beers_v1.BeerSearchState.reduce(state: beers_v1.BeerSearchState, command: beers_v1.BeerCommand) -&gt; beers_v1.BeerSearchState"
+                  moduleName = "beers_v1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoincerti/Desktop/beer-RxSwift/beers_v1/beers-model/Beers.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2268">
+               </Location>
+               <Location
+                  uuid = "9FCBD746-920C-44EE-8E16-F9679AD47C73 - a4ee6c5289d4f277"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (inout beers_v1.BeerSearchState) -&gt; () in static beers_v1.BeerSearchState.reduce(state: beers_v1.BeerSearchState, command: beers_v1.BeerCommand) -&gt; beers_v1.BeerSearchState"
+                  moduleName = "beers_v1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoincerti/Desktop/beer-RxSwift/beers_v1/beers-model/Beers.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5189B7D-5B37-4A78-8F3C-A0B16C53997F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "beers_v1/beers-model/Beers.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "reduce(state:command:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5189B7D-5B37-4A78-8F3C-A0B16C53997F - 8160b05a24bb93e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static beers_v1.BeerSearchState.reduce(state: beers_v1.BeerSearchState, command: beers_v1.BeerCommand) -&gt; beers_v1.BeerSearchState"
+                  moduleName = "beers_v1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoincerti/Desktop/beer-RxSwift/beers_v1/beers-model/Beers.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "B5189B7D-5B37-4A78-8F3C-A0B16C53997F - e1ddad6dc4f398d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout beers_v1.BeerSearchState) -&gt; () in static beers_v1.BeerSearchState.reduce(state: beers_v1.BeerSearchState, command: beers_v1.BeerCommand) -&gt; beers_v1.BeerSearchState"
+                  moduleName = "beers_v1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoincerti/Desktop/beer-RxSwift/beers_v1/beers-model/Beers.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "B5189B7D-5B37-4A78-8F3C-A0B16C53997F - 7090bd35110af6d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (inout beers_v1.BeerSearchState) -&gt; () in static beers_v1.BeerSearchState.reduce(state: beers_v1.BeerSearchState, command: beers_v1.BeerCommand) -&gt; beers_v1.BeerSearchState"
+                  moduleName = "beers_v1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcoincerti/Desktop/beer-RxSwift/beers_v1/beers-model/Beers.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -81,8 +81,6 @@ func beersSearch(
         loadNextPageTrigger: @escaping (Driver<BeerSearchState>) -> Signal<()>,
         performSearch: @escaping (URL) -> Observable<SearchBeersResponse>
     ) -> Driver<BeerSearchState> {
-
-
         
         //Quando cerco
     let searchPerformerFeedback: (Driver<BeerSearchState>) -> Signal<BeerCommand> = react(
@@ -93,10 +91,6 @@ func beersSearch(
                 if !query.shouldLoadNextPage {
                     return Signal.empty()
                 }
-            //Devo modificare qua, controlla se è vuoto e poi consegna il url su cui fare la chiamata
-                //if query.searchText.isEmpty {
-                    //return Signal.just(BeerCommand.BeerResponseReceived(.success((beers: [], nextURL: nil))))
-                //}
 
                 guard let nextURL = query.nextURL else {
                     return Signal.empty()
